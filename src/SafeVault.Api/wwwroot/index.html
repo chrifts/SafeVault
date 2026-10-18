@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SafeVault</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>SafeVault</h1>
+
+    <!-- Client-side checks are only for user experience; the server validates everything again. -->
+    <form id="register-form">
+      <h2>Register</h2>
+      <input name="username" placeholder="Username" required pattern="[a-zA-Z0-9]{3,30}" maxlength="30">
+      <input name="email" type="email" placeholder="Email" required maxlength="254">
+      <input name="password" type="password" placeholder="Password" required minlength="8" maxlength="128">
+      <button type="submit">Register</button>
+    </form>
+
+    <form id="login-form">
+      <h2>Login</h2>
+      <input name="username" placeholder="Username" required maxlength="30">
+      <input name="password" type="password" placeholder="Password" required maxlength="128">
+      <button type="submit">Login</button>
+    </form>
+
+    <p id="output" role="status"></p>
+  </main>
+
+  <!-- External file (no inline script) so it works with the Content-Security-Policy header. -->
+  <script src="app.js"></script>
+</body>
+</html>
