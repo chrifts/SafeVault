@@ -1,0 +1,21 @@
+# Build output
+bin/
+obj/
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+
+# Local database (created at runtime)
+*.db
+*.db-shm
+*.db-wal
+
+# Test results
+TestResults/
+
+# Secrets: never commit these
+.env
+appsettings.*.local.json
